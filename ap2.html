@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+</head>
+<body>
+
+<p>サンプルページです。</p>
+
+<p>
+<label>名前：<input type="number" id="nameText"></label>
+</p>
+
+<p id="msg"></p>
+
+<script>
+function inputChange(event){
+  <!msg.innerText = 'お名前は' + nameText.value + 'さんですね';>
+  for (var i=0; i<nameText.value; i++) {
+   msg.innerText = 'ABC';
+  }
+}
+
+let nameText = document.getElementById('nameText');
+nameText.addEventListener('change', inputChange);
+let msg = document.getElementById('msg');
+</script>
+
+<div>
+<label><input type="checkbox" id="saveCheckbox">朝食</label>
+</div>
+
+<p id="msg2"></p>
+
+<script>
+function valueChange(event){
+  if (saveCheckbox.checked){
+    msg2.innerText = '「朝食」が選択されました';
+  }else{
+    msg2.innerText = '「朝食」が解除されました';
+  }
+}
+
+let saveCheckbox = document.getElementById('saveCheckbox');
+saveCheckbox.addEventListener('change', valueChange);
+let msg2 = document.getElementById('msg2');
+</script>
+
+<p id="moji">
+<script>
+ for (var i=0; i<2; i++) {
+  let str = document.createElement('p');
+  str.innerText = 'ABC';
+  <!document.body.appendChild(str.link("https://atcoder.jp/contests/abc300"));>
+  let str2 = new String("abc");
+  document.write(str2.link("https://atcoder.jp/contests/abc300/"));
+ }
+</script>
+</p>
+
+</body>
+</html>
