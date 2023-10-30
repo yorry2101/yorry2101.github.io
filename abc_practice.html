@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+</head>
+<body>
+
+<p>AtCoder ABCコンテストランダム生成</p>
+
+<p>
+<label>個数：<input type="number" id="selNum"></label>
+<!input type="button" value="Check" id="checkButton">
+</p>
+
+<p id="msg"></p>
+
+<script>
+function inputChange(event){
+  msg.innerHTML = "<p>"+selNum.value+"</p>";
+  for (let i=0; i<selNum.value; i++) {
+    let num = Math.floor(Math.random()*300)+1;
+    let outNum = ('000'+num).slice(-3);
+    let outStr = "<p>ABC"+outNum+"</p>";
+    //let outStr = "ABC"+outNum;
+    //document.writeln(outStr.link("https://atcoder.jp/contests/abc"+outNum));
+    msg.innerHTML += outStr.link("https://atcoder.jp/contests/abc"+outNum);
+  }
+}
+
+let selNum = document.getElementById('selNum');
+selNum.value = 0;
+let msg = document.getElementById('msg');
+
+//let checkButton = document.getElementById('checkButton');
+selNum.addEventListener('change', inputChange);
+//let msg = document.getElememtById('msg');
+</script>
+
+</body>
+</html>
