@@ -11,7 +11,7 @@ body {
 
 .appframe{
     background: #ffffff;
-    width: 420px;
+    width: auto;
     margin: auto;
     padding: 10px;
     border-radius: 10px;
