@@ -87,12 +87,12 @@ header {
     margin-bottom: 1rem;
   }
   
-  .features {
-    align-self: end;
+  .number {
+    right: -75%;
   }
 
-  .number {
-    right: auto;
+  .features {
+    align-self: end;
   }
   
   .card-container {
