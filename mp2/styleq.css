@@ -1,25 +1,38 @@
+@charset "utf-8";
 @layer open-props, base, styles;
 
 body {
-    background-color: #f0f0f0;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
 }
 
 header {
   display: flex;
+  height: 6rem;
   width: 100%;
-  height: 100px;
-  background-color: darkgrey;
   align-items: center;
+  top: 0;
+  background-color: #00A1E9;
+  color: #f8f8f8;
 }
- 
-.title {
-  margin-right: auto;
+
+.subheader {
+  font-weight: bold;
+  align-self: center;
+  margin: 0.5rem;
 }
- 
-.menu-item {
-  list-style: none;
-  display: inline-block;
-  padding: 10px;
+
+main {
+  flex: 1;
+  overflow-y: scroll;
+  background-color: #f7f7f7;
 }
 
 .card-container {
@@ -29,6 +42,13 @@ header {
 @container style(--white: true){
   .history-card {
     background: #ffffff;
+  }
+}
+
+@container style(--oit: true){
+  .history-card {
+    color: #ffffff;
+    background: linear-gradient(60deg, #00A1E9, #064583);
   }
 }
 
@@ -78,19 +98,47 @@ header {
 
 @layer styles {
   .nickname {
+    font-weight: bold;
     font-size: 2rem;
   }
   
   .source {
     margin-bottom: 1rem;
   }
+
+  .source span {
+    font-weight: bold;
+  }
   
   .number {
-    font-size: 2rem;
+    font-size: 1.5rem;
     position: absolute;
     padding-right: 40px;
     justify-self: flex-end;
     align-self: center;
+  }
+
+  .number span {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  .status {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;/*文字色*/
+    background: #ffb900;
+    border: solid 3px #ffb900;/*線*/
+    border-radius: 20px;/*角の丸み*/
+  }
+
+  .status2 {
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;/*文字色*/
+    background: #20bf7a;
+    border: solid 3px #20bf7a;/*線*/
+    border-radius: 20px;/*角の丸み*/
   }
 
   .features {
@@ -146,7 +194,7 @@ header {
     display: grid;
     /*grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));*/
     max-width: 800px;
-    margin: 0 auto;
+    margin: auto;
     gap: 1rem;
     padding: 1rem;
   }

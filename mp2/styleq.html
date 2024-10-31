@@ -1,75 +1,68 @@
 <!DOCTYPE html>
-  <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title></title>
-    <link rel="stylesheet" href="styleq.css" />
-  </head>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Header Sample</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
+<body>
+  <div class="container">
     <header>
-      <h1 class="title">タイトル</h1>
-      <nav class="nav">
-        <ul class="menu-group">
-          <li class="menu-item"><a href="#">項目1</a></li>
-          <li class="menu-item"><a href="#">項目2</a></li>
-          <li class="menu-item"><a href="#">項目3</a></li>
-          <li class="menu-item"><a href="#">項目4</a></li>
-          <li class="menu-item"><a href="#">項目5</a></li>
-        </ul>
-      </nav>
+        <img decoding="async" class="header-logoImg" src="HxS_logo_W.svg" width="100">
+        <h1 class="title">フランクフルト<br>モバイルオーダー</h1>
     </header>
-    <ul class="card-list">
-      <li class="card-container" style="--white: true;">
-        <div class="history-card">
-          <div class="nickname">ミスターフルト</div>
-          <div class="time">11:30</div>
-          <div class="source">
-            <div class="high">ケチャップ: <span>あり</span></div>
-            <div class="low">マスタード: <span>あり</span></div>
-        </div>
-        <div class="number">3本</div>
-        <div class="features">
-          受け取り待ち
-        </div>
-      </li>
-      <li class="card-container" style="--cloudy: true;">
-        <div class="history-card">
-          <div class="nickname">February <span>10</span></div>
-          <div class="time">Friday</div>
-          <div class="source">
-            <div class="high">High: <span>45</span></div>/
-            <div class="low">Low: <span>39</span></div>
+    <div class="subheader">注文履歴</div>
+    <main>
+        <ul class="card-list">
+        <li class="card-container" style="--white: true;">
+          <div class="history-card">
+            <div class="nickname">ミスターフルト</div>
+            <div class="time">14:10</div>
+            <div class="source">
+              <div class="ketchap">ケチャップ: <span>なし</span></div>
+              <div class="mustard">マスタード: <span>あり</span></div>
           </div>
-        <div class="features">
-          Mostly cloudy
-        </div>
-      </li>
-      <li class="card-container" style="--cloudy: true; --sunny: true;">
-        <div class="history-card">
-          <div class="nickname">February <span>11</span></div>
-          <div class="time">Saturday</div>
-          <div class="source">
-            <div class="high">High: <span>55</span></div>/
-            <div class="low">Low: <span>47</span></div>
-        </div>
-        <div class="features">
-          Partly cloudy
-        </div>
-      </li>
-      <li class="card-container" style="--sunny: true;">
-        <div class="history-card">
-          <div class="nickname">February <span>12</span></div>
-          <div class="time">Saturday</div>
-          <div class="source">
-            <div class="high">High: <span>55</span></div>/
-            <div class="low">Low: <span>47</span></div>
+          <div class="number"><span>2</span>本</div>
+          <div class="status" id="makeImg">受け取り待ち</div>
+        </li>
+        <li class="card-container" style="--white: true;">
+          <div class="history-card">
+            <div class="nickname">かばやき</div>
+            <div class="time">13:17</div>
+            <div class="source">
+              <div class="ketchap">ケチャップ: <span>なし</span></div>
+              <div class="mustard">マスタード: <span>なし</span></div>
+            </div>
+          <div class="number"><span>5</span>本</div>
+          <div class="status2" id="makeImg">受け取り完了</div>
+        </li>
+        <li class="card-container" style="--white: true;">
+          <div class="history-card">
+            <div class="nickname">大阪太郎</div>
+            <div class="time">12:35</div>
+            <div class="source">
+              <div class="ketchap">ケチャップ: <span>あり</span></div>
+              <div class="mustard">マスタード: <span>あり</span></div>
           </div>
-        <div class="features">
-          Clear skies, sun
-        </div>
-      </li>
-    </ul>
-  </body>
+          <div class="number"><span>1</span>本</div>
+          <div class="status2" id="makeImg">受け取り完了</div>
+        </li>
+        <li class="card-container" style="--white: true;">
+          <div class="history-card">
+            <div class="nickname">わさびのりこ</div>
+            <div class="time">11:30</div>
+            <div class="source">
+              <div class="ketchap">ケチャップ: <span>あり</span></div>
+              <div class="mustard">マスタード: <span>なし</span></div>
+            </div>
+          <div class="number"><span>3</span>本</div>
+          <div class="status2" id="makeImg">受け取り完了</div>
+        </li>
+      </ul>
+    </main>
+    </div>
+</body>
+
 </html>
