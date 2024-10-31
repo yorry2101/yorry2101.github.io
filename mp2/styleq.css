@@ -33,6 +33,8 @@ header {
 main {
   flex: 1;
   overflow-y: scroll;
+  height:100vh;
+  height: -webkit-fill-available;
   background-color: #f7f7f7;
 }
 
