@@ -1,7 +1,7 @@
 @layer open-props, base, styles;
 
 body {
-    background-color: #fde9c5;
+    background-color: #f0f0f0;
 }
 
 .card-container {
