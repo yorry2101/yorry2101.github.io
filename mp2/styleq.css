@@ -38,6 +38,11 @@ header {
   left: 0;
 }
 
+h3 {
+  margin: 0;
+  line-height: 40px;
+}
+
 main {
   flex: 1;
   overflow-y: scroll;
