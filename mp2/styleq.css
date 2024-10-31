@@ -88,8 +88,11 @@ header {
   }
   
   .number {
-    position: relative;
-    right: -75%;
+    font-size: 2rem;
+    position: absolute;
+    padding-right: 40px;
+    justify-self: flex-end;
+    align-self: center;
   }
 
   .features {
