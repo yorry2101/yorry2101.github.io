@@ -16,7 +16,7 @@ body {
 
 header {
   display: flex;
-  height: 6rem;
+  height: 100px;
   width: 100%;
   align-items: center;
   top: 0;
@@ -25,9 +25,17 @@ header {
 }
 
 .subheader {
-  font-weight: bold;
-  align-self: center;
-  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.return {
+  stroke: #000;
+  stroke-width: 3;
+  stroke-linecap: round;
+  position: absolute;
+  left: 0;
 }
 
 main {
