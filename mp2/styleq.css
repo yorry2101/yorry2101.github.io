@@ -8,6 +8,12 @@ body {
   container-name: weather;
 }
 
+@container style(--white: true){
+  .history-card {
+    background: #ffffff;
+  }
+}
+
 @container style(--rain: true) {
   .history-card {
     background: linear-gradient(140deg, #76c4f2, #2ecdbb);
