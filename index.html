@@ -1,98 +1,90 @@
-<html>
-  <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet">
-    <style type="text/css">
-      #network {
-        width:  100%;
-        height: 100%;
-      }
-    </style>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
-  </head>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>yorry2101's Homepage | Top</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-  <body>
-    <div id="network"></div>
-    <script type="text/javascript">
-      var nodes = new vis.DataSet([
-        {id: 1, label: '動詞', group: 1},
-        {id: 2, label: 'その他', group: 2},
-        {id: 3, label: '助動詞', group: 3},
-        {id: 4, label: '時制', group: 4},
-        {id: 5, label: '名詞・形容詞・代名詞', group: 5},
-        {id: 100, label: '現在形', group: 4},
-        {id: 101, label: '現在進行形', group: 4},
-        {id: 102, label: '過去形', group: 4},
-        {id: 103, label: '過去進行形', group: 4},
-        {id: 104, label: '現在完了形', group: 4},
-        {id: 105, label: '過去完了形', group: 4},
-        {id: 106, label: '現在完了進行形', group: 4},
-        {id: 201, label: 'can', group: 3},
-        {id: 202, label: 'will', group: 3},
-        {id: 203, label: 'その他の助動詞', group: 3},
-        {id: 204, label: '助動詞(高校)', group: 3},
-        {id: 301, label: 'be動詞', group: 1},
-        {id: 302, label: '一般動詞', group: 1},
-        {id: 303, label: '不定詞', group: 1},
-        {id: 304, label: '動名詞', group: 1},
-        {id: 305, label: '受動態', group: 1},
-        {id: 306, label: '分詞', group: 1},
-        {id: 307, label: '分詞構文', group: 1},
-        {id: 400, label: '名詞', group: 5},
-        {id: 401, label: '形容詞', group: 5},
-        {id: 402, label: '代名詞', group: 5},
-        {id: 403, label: '関係代名詞', group: 5},
-        {id: 404, label: '関係副詞', group: 5},
-        {id: 405, label: '代名詞(高校)', group: 5},
-        {id: 500, label: '疑問詞', group: 2},
-        {id: 501, label: '接続詞', group: 2},
-        {id: 502, label: '比較(中学)', group: 2},
-        {id: 503, label: '間接疑問文', group: 2},
-        {id: 504, label: '仮定法', group: 2},
-        {id: 505, label: '接続詞(高校)', group: 2},
-        {id: 506, label: '比較(高校)', group: 2},
-        {id: 600, label: 'test', group: 2},
-      ]);
-      var edges = new vis.DataSet([
-        {from: 1, to: 2, arrows: 'enabled'},
-        {from: 2, to: 3, arrows: 'enabled'},
-        {from: 3, to: 4, arrows: 'enabled'},
-        {from: 4, to: 5, arrows: 'enabled'},
-        {from: 101, to: 100, arrows: 'to'},
-        {from: 102, to: 100, arrows: 'to'},
-        {from: 103, to: 102, arrows: 'to'},
-        {from: 104, to: 102, arrows: 'to'},
-        {from: 105, to: 104, arrows: 'to'},
-        {from: 106, to: 103, arrows: 'to'},
-        {from: 202, to: 201, arrows: 'to'},
-        {from: 203, to: 202, arrows: 'to'},
-        {from: 203, to: 201, arrows: 'to'},
-        {from: 204, to: 203, arrows: 'to'},
-        {from: 302, to: 301, arrows: 'to'},
-        {from: 304, to: 303, arrows: 'to'},
-        {from: 305, to: 302, arrows: 'to'},
-        {from: 306, to: 305, arrows: 'to'},
-        {from: 307, to: 306, arrows: 'to'},
-        {from: 403, to: 401, arrows: 'to'},
-        {from: 405, to: 402, arrows: 'to'},
-        {from: 404, to: 403, arrows: 'to'},
-        {from: 503, to: 500, arrows: 'to'},
-        {from: 505, to: 501, arrows: 'to'},
-        {from: 506, to: 502, arrows: 'to'},
-        {from: 504, to: 203, arrows: 'to'},
-        {from: 303, to: 400, arrows: 'to'},
-        {from: 303, to: 401, arrows: 'to'},
-        {from: 304, to: 400, arrows: 'to'},
-        {from: 306, to: 401, arrows: 'to'},
-        {from: 307, to: 501, arrows: 'to'},
-      ]);
-      var container = document.getElementById('network');
-      var data = {
-        nodes: nodes,
-        edges: edges
-      };
-      var options = {
-      };
-      var network = new vis.Network(container, data, options);
-    </script>
-  <body>
+<body>
+  <div class="container">
+    <header>
+      <a href="#">
+        <img class="header-Img" src="yuni.png" width="70">
+      </a>
+      <a href="#" class="title">
+        yorry2101's Homepage
+      </a>
+
+      <nav>
+        <ul>
+          <li class="header-list">
+            <a href="#" class="active">TOP</a>
+          </li>
+          <li class="header-list">
+            <a href="#">PORTFOLIO</a>
+          </li>
+          <li class="header-list">
+            <a href="#">OTHER</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <img src="background_pic.jpg" class="responsive-img"/>
+      <ul class="card-list">
+        <li>
+          <a href="#" target="_blank" class="blog-link">
+            <h3>iPhone 16に機種変更</h3>
+            <div class="blog-meta">
+              <div class="blog-published">
+                2025/08/22 17:31
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="blog-link">
+            <h3>2つめ</h3>
+            <div class="blog-meta">
+              <div class="blog-published">
+                2025/08/17 20:37
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="blog-link">
+            <h3>3つめ</h3>
+            <div class="blog-meta">
+              <div class="blog-published">
+                2025/08/03
+              </div>
+            </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="blog-link">
+            <h3>4つめ</h3>
+            <div class="blog-meta">
+              <div class="blog-published">
+                2025/08/03
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <p>© 2025 yorry2101</p>
+    </footer>
+  </div>
+</body>
+
 </html>
