@@ -10,12 +10,7 @@ header {
   height: 80px;
   width: 100%;
   align-items: center;
-  top: 0;
-  background: rgba(20, 39, 59, .8);
-  /*background-color: #00A1E9;*/
-  position: absolute;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  color: #f8f8f8;
+  background: rgba(20, 39, 59, 0.8);
 }
 
 a {
@@ -23,9 +18,7 @@ a {
 }
 
 nav {
-  text-align: right;
   position: absolute;
-  top: 0;
   right: 0;
   padding: 0 20px;
 }
@@ -39,15 +32,8 @@ nav a:hover {
 }
 
 nav a.active {
-  color: rgba(255, 255, 255, 1);
+  color: white;
   border-bottom: 2px solid white;
-}
-
-ul {
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    unicode-bidi: isolate;
 }
 
 li {
@@ -55,28 +41,18 @@ li {
 }
 
 main {
-  flex: 1;
-  /*overflow-y: scroll;*/
   background-color: #f7f7f7;
 }
 
 h3 {
-  margin: 0;
-  line-height: 40px;
+  margin: 1px 0;
 }
 
 footer {
   text-align: center;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
-}
-
-.header-Img {
+.header-img {
   height: 50px;
   width: auto;
   padding: 12px 10px 10px 15px;
@@ -84,25 +60,14 @@ footer {
 }
 
 .title {
-  display:inline;
-  position: relative;
-  font-size: 1.5rem;
-  font-family: PingFangSC, PingFang SC;
-  font-weight: 500;
   color: white;
 }
 
 .header-list {
-  display:inline;
-  height: 56px;
-  padding-left: 12px;
-  padding-right: 12px;
-  position: relative;
-  font-size: 16px;
-  font-family: PingFangSC, PingFang SC;
+  display: inline;
+  padding: 0 12px;
   font-weight: 500;
-  line-height: 56px;
-  letter-spacing: -1px;
+  font-size: 1.2rem;
 }
 
 .responsive-img {
@@ -113,13 +78,12 @@ footer {
 .card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  max-width: auto;
   margin: auto;
   gap: 1rem;
   padding: 1rem;
 }
 
-a.blog-link {
+.blog-link {
   display: block;
   color: black;
   background: #ffffff;
@@ -128,7 +92,7 @@ a.blog-link {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-a.blog-link:hover {
+.blog-link:hover {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
