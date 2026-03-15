@@ -17,7 +17,7 @@
       <h1>My Homepage</h1>
     </a>
 
-    <nav>
+    <nav class="header-menu">
       <ul>
         <li class="header-list">
           <a href="../">TOP</a>
@@ -30,6 +30,26 @@
         </li>
       </ul>
     </nav>
+
+    <div class="menu-wrapper">
+      <input type="checkbox" id="menu-toggle" hidden>
+
+      <label class="menu-icon" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="overlay"></div>
+
+      <nav class="menu-mobile">
+        <ul>
+          <li><a href="../">TOP</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="/other">OTHER</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <main>

@@ -17,23 +17,27 @@ a {
   text-decoration: none;
 }
 
-nav {
-  position: absolute;
-  right: 0;
+.header-menu {
   padding: 0 20px;
 }
 
-nav a {
+.header-menu a {
   color: rgba(255, 255, 255, 0.8);
 }
 
-nav a:hover {
+.header-menu a:hover {
   color: white;
 }
 
-nav a.active {
+.header-menu a.active {
   color: white;
   border-bottom: 2px solid white;
+}
+
+@media screen and (width <=940px) {
+  .header-menu {
+    display: none;
+  }
 }
 
 li {
@@ -61,6 +65,106 @@ footer {
 
 .title {
   color: white;
+  margin-right: auto;
+}
+
+@media screen and (940px < width) {
+  .menu-wrapper {
+    display: none;
+  }
+}
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 30px;
+  position: fixed;
+  /* ← fixedにして常に右上固定 */
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 3;
+  display: inline-block;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+/* ハンバーガーがXに変形 */
+#menu-toggle:checked+.menu-icon span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+#menu-toggle:checked+.menu-icon span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* オーバーレイ背景 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+#menu-toggle:checked~.overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* メニュー本体（右から出す） */
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* ← 初期位置を右へ */
+  width: 250px;
+  height: 100%;
+  background: rgba(20, 39, 59, 0.8);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+  transition: right 0.4s ease;
+  z-index: 2;
+}
+
+#menu-toggle:checked~.menu-mobile {
+  right: 0;
+  /* ← 開いたときは右0へ */
+}
+
+.menu-mobile ul {
+  list-style: none;
+  padding: 60px 20px;
+}
+
+.menu-mobile li {
+  margin: 20px 0;
+}
+
+.menu-mobile a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu-mobile a:hover {
+  color: #007bff;
 }
 
 .header-list {
