@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Image Capture Test | Other</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/other/capture_image/capture_image.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <a href="/">
+      <img class="header-img" src="../icon.png" alt="Icon">
+    </a>
+    <a href="/" class="title">
+      <h1>My Homepage</h1>
+    </a>
+    <nav class="header-menu">
+      <ul>
+        <li class="header-list"><a href="/">TOP</a></li>
+        <li class="header-list"><a href="/">PORTFOLIO</a></li>
+        <li class="header-list"><a href="/other" class="active">OTHER</a></li>
+      </ul>
+    </nav>
+
+    <div class="menu-wrapper">
+      <input type="checkbox" id="menu-toggle" hidden>
+
+      <label class="menu-icon" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <div class="overlay"></div>
+
+      <nav class="menu-mobile">
+        <ul>
+          <li><a href="/">TOP</a></li>
+          <li><a href="/">PORTFOLIO</a></li>
+          <li><a href="/other">OTHER</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="capture-container">
+      <h2>Capture Image</h2>
+      <p>画像をアップロードするか、URLを貼り付けてください。画像は64x48の黒いキャンバスに描画され、Base64文字列に変換されます。</p>
+      <!--
+      <p>Paste an image from your clipboard (Ctrl+V / Cmd+V), drop an image file, or enter a URL. The image will be
+        drawn on a 1024x768 black canvas and converted to Base64.</p>
+      -->
+      <div id="dropZone" class="drop-zone">
+        <p><strong>Click to Choose</strong>, Drag & Drop an image here, or <strong>Paste (Ctrl+V)</strong> anywhere on
+          the page.</p>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+      </div>
+
+      <div class="divider"><span>OR</span></div>
+
+      <div class="input-group" style="margin-bottom: 1.5rem;">
+        <input type="text" id="imageUrlInput" placeholder="https://example.com/image.jpg"
+          value="https://picsum.photos/600/400">
+        <button id="captureBtn">Fetch URL</button>
+      </div>
+
+      <div class="settings-group">
+        <label>Output Size:</label>
+        <input type="number" id="outputWidth" value="64" min="4" step="4">
+        <span>x</span>
+        <input type="number" id="outputHeight" value="48" min="3" step="3">
+        <span class="ratio-text">(4:3 ratio)</span>
+      </div>
+
+      <div id="loading" style="display: none;">Processing...</div>
+      <div id="error" class="error-message"></div>
+
+      <div class="result-container" id="resultContainer" style="display: none;">
+        <h3>Captured Result</h3>
+        <img id="resultImage" src="" alt="Captured Result">
+        <h4>Base64 Output (click to copy)</h4>
+        <textarea id="resultBase64" class="result-textarea" readonly></textarea>
+        <button id="copyBtn" class="copy-btn">Copy to Clipboard</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 yorry2101</p>
+  </footer>
+
+  <script src="/other/capture_image/capture_image.js"></script>
+  <script src="/other/capture_image/capture_imagef.js"></script>
+</body>
+
+</html>

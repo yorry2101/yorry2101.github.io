@@ -59,7 +59,7 @@ footer {
 .header-img {
   height: 50px;
   width: auto;
-  padding: 12px 10px 10px 15px;
+  padding: 15px 15px 15px 15px;
   border-radius: 50%;
 }
 
@@ -76,18 +76,24 @@ footer {
 
 .menu-wrapper {
   position: relative;
+  align-items: normal;
 }
 
 .menu-icon {
   width: 40px;
-  height: 30px;
+  height: 40px;
   position: fixed;
   /* ← fixedにして常に右上固定 */
-  top: 25px;
-  right: 20px;
+  right: 0px;
   cursor: pointer;
-  z-index: 3;
+  z-index: 4;
   display: inline-block;
+  background: rgba(20, 39, 59, 0.8);
+  margin-top: -40px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
 }
 
 .menu-icon span {
@@ -113,10 +119,11 @@ footer {
 }
 
 /* オーバーレイ背景 */
+/*
 .overlay {
   position: fixed;
   inset: 0;
-  /*background: rgba(0, 0, 0, 0.5);*/
+  background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: 0.4s;
@@ -127,6 +134,7 @@ footer {
   opacity: 1;
   pointer-events: auto;
 }
+*/
 
 /* メニュー本体（右から出す） */
 .menu-mobile {
@@ -139,7 +147,7 @@ footer {
   background: rgba(20, 39, 59, 0.8);
   box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
   transition: right 0.4s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 #menu-toggle:checked~.menu-mobile {
@@ -202,4 +210,24 @@ footer {
 
 .blog-meta {
   color: gray;
+}
+
+.input-group {
+  margin-bottom: 2.0rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@media screen and (768px > width) {
+  .input-group {
+    flex-direction: column;
+  }
+}
+
+.input-group input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
 }
